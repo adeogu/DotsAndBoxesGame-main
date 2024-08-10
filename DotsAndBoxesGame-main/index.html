@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Dots and Boxes</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div id="main-box">
+
+      <div class="game-container">
+        <h1>Dots and Boxes</h1>
+
+        <!-- Left Column: Game Table -->
+        <div id="localGridContainer"></div>
+        <div id="onlineGridContainer"></div>
+      </div>
+      <!-- Right Column: Form -->
+      <div class="form-container">
+        <div id="onlineMenu">
+          <div id="onlineCount"></div>
+          <div id="lobbies">
+            <h2>Lobbies <input type="checkbox" id="toggleLobbiesTable" checked></h2>
+            <table id="lobbiesTable"></table>
+          </div>
+        </div>
+        </divs>
+
+        <div id="matchInfo">
+          <h2>Match History</h2>
+          <table id="matchTable"></table>
+          <h3>Play Again</h3>
+          <div id="rematchForm"></div>
+          <h3>Feed</h3>
+          <div id="playerLeftMatch"></div>
+          <button type="button" id="leaveMatch" onclick="leaveMatch()">Leave</button>
+        </div>
+        <form id="gameForm">
+          <label for="displayName">Display Name:</label>
+          <textarea id="displayName" name="displayName" rows="1" cols="15" maxlength="10"></textarea><br>
+
+          <label for="rows">Rows:</label>
+          <select id="rows" name="rows">
+            <option value="3" selected>3</option>
+          </select><br>
+
+          <label for="columns">Columns:</label>
+          <select id="columns" name="columns">
+            <option value="3" selected>3</option>
+          </select><br>
+
+          <label for="players">Players:</label>
+          <select id="players" name="players">
+            <option value="2" selected>2</option>
+          </select><br>
+
+          <button type="button" onclick="startLocalGame()">Restart Game</button><br>
+          <button type="button" id="createLobby">Create Lobby</button><br>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="script.js"></script>
+    <script src="client.js"></script>
+    <script src="online.js"></script>
+</body>
+
+</html>

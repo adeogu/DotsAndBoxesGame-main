@@ -1,0 +1,290 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+  left: -35px;
+
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  position: relative;
+  left: -0px;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  position: relative;
+  left: -0px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+  position: relative;
+  left: -0px;
+}
+
+tr:hover {
+  background-color: #ddd;
+  position: relative;
+  left: -0px;
+}
+
+
+
+
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(37, 231, 253);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+.matchInfo a:hover {
+  background-color: #ddd;
+}
+
+table {
+  margin-left: 36px;
+
+
+}
+
+textarea {
+  width: 100px;
+  padding: 1px;
+  border: 2px solid #00efff;
+  /* Neon green border */
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff, #fff);
+  box-shadow: 0 0 20px rgb(255 255 255 / 50%), inset 0 0 10px rgb(52 222 255 / 30%);
+  text-align: center;
+  transition: transform 0.1s, box-shadow 0.1s;
+  transform: skewZ(20deg);
+  margin-top: -100px;
+  /* Adjust the value as needed */
+  height: 0px;
+  position: relative;
+  top: 5px;
+
+
+
+
+
+
+}
+
+h1 {
+  font-size: 35px;
+  margin: 20px 0;
+  color: black;
+  height: 200px;
+  text-align: center
+}
+
+h2 {
+  color: black;
+  text-align: left;
+  height: 20px;
+  margin-left: -0px;
+  height: -90px;
+  text-align: center;
+
+
+
+
+}
+
+textarea {
+
+  height: 15px;
+
+}
+
+label {
+  font-size: 19px
+}
+
+
+
+/* main display container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#main-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  /* width: 95%; */
+  /* max-width: 1200px; */
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* game on left */
+.game-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  box-sizing: border-box;
+  height: 425px;
+  margin-left: -0px;
+
+}
+
+/* form on right */
+.form-container {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px;
+  box-sizing: box;
+  height: 200px;
+  margin-left: -45px;
+  margin-right: -030;
+  position: relative;
+  top: -40px;
+
+
+
+  /* Change the height here */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-left: px;
+
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+
+
+
+}
+
+button {
+  padding: 9px;
+  font-size: 15px;
+  color: white;
+  border: 1;
+  border-radius: 9px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  color: black;
+
+}
+
+/* GAME STYLE */
+.row {
+  display: grid;
+}
+
+.column {
+  position: relative;
+}
+
+.cell {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 5px;
+  left: 5px;
+  border-radius: 3px;
+}
+
+.horizontal-line,
+.vertical-line {
+  position: absolute;
+  background-color: lightslategray;
+  opacity: 0.25;
+  border-radius: 2px;
+}
+
+.horizontal-line {
+  width: 37px;
+  height: 4px;
+  top: 0;
+  left: 3px;
+}
+
+.vertical-line {
+  width: 4px;
+  height: 37px;
+  left: 0;
+  top: 4px;
+}
+
+.clickable-path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+}
+
+.path-line {
+  cursor: pointer;
+}
+
+.clicked-line {
+  background-color: blue;
+}
+
+.cell.completed-cell {
+  background-color: blue;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 800px) {
+  #main-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container {
+    flex: 1;
+  }
+}
